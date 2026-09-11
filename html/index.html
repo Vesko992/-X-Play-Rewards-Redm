@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Vesko-xdev">
+<title>Gameplay Rewards</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="panel" class="panel hidden">
+	<button id="close" class="close" type="button" aria-label="Close">&times;</button>
+	<div class="heading-rule"><span></span><b>◆</b><span></span></div>
+	<p class="eyebrow">DUSTLAND DAILY BONUS</p>
+	<h1>PLAYTIME REWARDS</h1>
+	<p class="subtitle">Turn your time in-game into daily rewards.</p>
+
+	<section class="reward-card" aria-live="polite">
+		<div class="reward-icon"><img id="reward-image" src="" alt=""></div>
+		<div class="reward-copy">
+			<span class="label" data-translation="nextReward">NEXT REWARD</span>
+			<strong id="reward">-</strong>
+		</div>
+		<span id="availability" class="availability">LOCKED</span>
+	</section>
+	<div id="rewards" class="rewards-grid" aria-label="Daily rewards"></div>
+
+	<section id="premium-section" class="premium-section locked">
+		<div class="premium-heading">
+			<div><span class="premium-kicker">DUSTLAND COINS</span><h2>PREMIUM REWARDS</h2></div>
+			<span id="premium-status" class="premium-status">LOCKED</span>
+		</div>
+		<p id="premium-note" class="premium-note">Buy Premium in the Dustland Coins menu to unlock these rewards.</p>
+		<div id="premium-rewards" class="rewards-grid premium-grid" aria-label="Premium rewards"></div>
+		<button id="buy-premium" class="claim-main premium-buy" type="button">BUY PREMIUM · 30 COINS <span>◆</span></button>
+		<button id="claim-premium" class="claim-main premium-claim hidden" type="button">CLAIM PREMIUM REWARD <span>◆</span></button>
+	</section>
+
+	<section class="progress-section">
+		<div class="progress-header">
+			<span data-translation="dayProgress">DAILY PROGRESS</span>
+			<b id="percent">0%</b>
+		</div>
+		<div class="timeline"><div class="progress" id="progress"></div></div>
+		<div class="markers" id="markers"></div>
+	</section>
+
+	<div class="stats">
+		<div><span data-translation="playtime">PLAY TIME</span><b id="playtime">00:00:00</b></div>
+		<div><span data-translation="nextIn">NEXT REWARD IN</span><b id="remaining">03:00:00</b></div>
+		<div><span data-translation="claimedToday">CLAIMED TODAY</span><b id="claimed">0</b></div>
+	</div>
+
+	<button id="claim" class="claim-main hidden" type="button">CLAIM REWARD <span>◆</span></button>
+	<p class="reset-note" data-translation="dailyReset">DAILY RESET: MIDNIGHT</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
